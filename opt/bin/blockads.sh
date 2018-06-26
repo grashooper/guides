@@ -114,7 +114,7 @@ sed -i '/0.0.0.0 windowupdate.org/d' block
 sed -i '/0.0.0.0 www.download.windowsupdate.com/d' block
 sed -i '/0.0.0.0 alipromo.com/d' block
 
-# "bad" dnsmasq names - just for clear log
+# Clear Bad Domain
 sed -i '/0.0.0.0 www.turkishạirlines.com/d' block
 sed -i '/0.0.0.0 ɢoogle.com/d' block
 sed -i '/0.0.0.0 secret.ɢoogle.com/d' block
