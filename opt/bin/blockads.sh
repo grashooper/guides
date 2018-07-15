@@ -43,13 +43,8 @@ sed -i '/0.0.0.0 ui.skype.com/d' block
 sed -i '/0.0.0.0 www.msftncsi.com/d' block
 sed -i '/0.0.0.0 stat.online.sberbank.ru/d' block
 sed -i '/0.0.0.0 s.click.aliexpress.com/d' block
-sed -i '/0.0.0.0 clck.yandex.ru/d' block
-sed -i '/0.0.0.0 mc.yandex.ru/d' block
 sed -i '/0.0.0.0 yandex.ru/d' block
 sed -i '/0.0.0.0 yastatic.net/d' block
-sed -i '/0.0.0.0 analytics.mobile.yandex.net/d' block
-sed -i '/0.0.0.0 informer.yandex.ru/d' block
-sed -i '/0.0.0.0 r.mail.ru/d' block
 sed -i '/0.0.0.0 c.fa.jd.com/d' block
 sed -i '/0.0.0.0 whale.jd.com/d' block
 sed -i '/0.0.0.0 saturn.jd.com/d' block
@@ -64,11 +59,6 @@ sed -i '/0.0.0.0 nnm-club.me/d' block
 sed -i '/0.0.0.0 nnm-club.ws/d' block
 sed -i '/0.0.0.0 nnmclub.to/d' block
 sed -i '/0.0.0.0 nnm-club.lib/d' block
-sed -i '/0.0.0.0 www.google-analytics.com/d' block
-sed -i '/0.0.0.0 google-analytics.com/d' block
-sed -i '/0.0.0.0 ssl.google-analytics.com/d' block
-sed -i '/0.0.0.0 analytics.google.com/d' block
-sed -i '/0.0.0.0 id.google.com/d' block
 sed -i '/0.0.0.0 connectivitycheck.gstatic.com/d' block
 sed -i '/0.0.0.0 badges.instagram.com/d' block
 sed -i '/0.0.0.0 graph.instagram.com/d' block
