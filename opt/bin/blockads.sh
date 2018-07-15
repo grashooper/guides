@@ -45,6 +45,7 @@ sed -i '/0.0.0.0 stat.online.sberbank.ru/d' block
 sed -i '/0.0.0.0 s.click.aliexpress.com/d' block
 sed -i '/0.0.0.0 yandex.ru/d' block
 sed -i '/0.0.0.0 yastatic.net/d' block
+sed -i '/0.0.0.0 r.mail.ru/d' block
 sed -i '/0.0.0.0 c.fa.jd.com/d' block
 sed -i '/0.0.0.0 whale.jd.com/d' block
 sed -i '/0.0.0.0 saturn.jd.com/d' block
