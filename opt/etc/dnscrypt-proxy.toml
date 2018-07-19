@@ -28,7 +28,7 @@
 ## Remove the leading # first to enable this; lines starting with # are ignored.
 
 # server_names = ['scaleway-fr', 'google', 'yandex', 'cloudflare']
-
+server_names = ['cloudflare']
 
 ## List of local addresses and ports to listen to. Can be IPv4 and/or IPv6.
 ## Note: When using systemd socket activation, choose an empty set (i.e. [] ).
@@ -154,7 +154,7 @@ cert_refresh_delay = 240
 ## People in China may need to use 114.114.114.114:53 here.
 ## Other popular options include 8.8.8.8 and 1.1.1.1.
 
-fallback_resolver = '1.1.1.1:53'
+# fallback_resolver = '1.1.1.1:53'
 
 
 ## Never let dnscrypt-proxy try to use the system DNS settings;
@@ -238,7 +238,7 @@ cache = true
 
 ## Cache size
 
-cache_size = 512
+cache_size = 1536
 
 
 ## Minimum TTL for cached entries
