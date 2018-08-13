@@ -105,7 +105,7 @@ sed -i '/0.0.0.0 windowupdate.org/d' block
 sed -i '/0.0.0.0 www.download.windowsupdate.com/d' block
 sed -i '/0.0.0.0 alipromo.com/d' block
 sed -i '/0.0.0.0 rutrk.org/d' block
-sed -i '/0.0.0.0 adsrv.ea.con/d' block
+sed -i '/0.0.0.0 adsrv.ea.com/d' block
 
 # Clear Bad Domain
 sed -i '/0.0.0.0 www.turkishạirlines.com/d' block
