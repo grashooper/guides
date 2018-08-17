@@ -10,4 +10,5 @@ sed -i 's/0.0.0.0 //g' msblock.conf
 sed -i 's/.*/ipset=\/&\/msbl/' msblock.conf
 
 echo Restart dnsmasq
-killall -SIGHUP dnsmasq
+restart_dhcpd
+restart_firewall
