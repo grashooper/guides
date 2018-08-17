@@ -8,4 +8,5 @@ cd /opt/etc/
 sed -i 's/.*/ipset=\/&\/miner/' miner.conf
 
 echo Restart dnsmasq
-killall -SIGHUP dnsmasq
+restart_dhcpd
+restart_firewall
