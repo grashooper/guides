@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo List Generation
+echo Download list
 
 URLS="https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/list.txt \
 https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt"
