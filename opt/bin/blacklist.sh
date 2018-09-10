@@ -7,7 +7,7 @@ https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/
 
 wget -q -O- $URLS > /opt/etc/blacklist.conf
 
-echo Generation Block List
+echo Generation BlackList
 cd /opt/etc/
 sed -i '/^#/d;/^$/d' blacklist.conf
 sed -i 's/0.0.0.0 //g' blacklist.conf
