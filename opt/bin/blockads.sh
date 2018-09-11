@@ -9,7 +9,7 @@ http://winhelp2002.mvps.org/hosts.txt \
 https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0&mimetype=plaintext \
 https://www.malwaredomainlist.com/hostslist/hosts.txt \
 https://zeustracker.abuse.ch/blocklist.php?download=hostfile \
-https://zerodot1.gitlab.io/CoinBlockerLists/hosts"
+https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/hosts"
 
 wget  -T40 -q -O- $URLS | grep -v "^#" | cut -d "#" -f 1 | sed 's/127\.0\.0\.1/0\.0\.0\.0/' | grep "^0.0.0.0" | sed 's/  */ /g' | sed 's/\t/ /g' |sed 's/\r//' | cut -d " " -f 1,2 | tr A-Z a-z | sort | uniq > /opt/etc/hosts/block
 
