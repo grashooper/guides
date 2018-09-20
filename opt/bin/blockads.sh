@@ -8,111 +8,107 @@ https://mirror.cedia.org.ec/malwaredomains/domains.hosts \
 http://winhelp2002.mvps.org/hosts.txt \
 https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0&mimetype=plaintext \
 https://www.malwaredomainlist.com/hostslist/hosts.txt \
-https://zeustracker.abuse.ch/blocklist.php?download=hostfile \
-https://gitlab.com/ZeroDot1/CoinBlockerLists/raw/master/hosts"
+https://zeustracker.abuse.ch/blocklist.php?download=hostfile"
 
-wget  -T40 -q -O- $URLS | grep -v "^#" | cut -d "#" -f 1 | sed 's/127\.0\.0\.1/0\.0\.0\.0/' | grep "^0.0.0.0" | sed 's/  */ /g' | sed 's/\t/ /g' |sed 's/\r//' | cut -d " " -f 1,2 | tr A-Z a-z | sort | uniq > /opt/etc/hosts/block
+wget -q -O- $URLS | grep -v "^#" | cut -d "#" -f 1 | sed 's/127\.0\.0\.1/0\.0\.0\.0/' | grep "^0.0.0.0" | sed 's/  */ /g' | sed 's/\t/ /g' |sed 's/\r//' | cut -d " " -f 1,2 | tr A-Z a-z | sort | uniq > /opt/etc/hosts/block
 
 echo Clear List
 
 cd /opt/etc/hosts
-sed -i '/0.0.0.0 localhost/d' block
-sed -i '/0.0.0.0 localhost.localdomain/d' block
-sed -i '/0.0.0.0 ad.admitad.com/d' block
-sed -i '/0.0.0.0 api.cc.skype.com/d' block
-sed -i '/0.0.0.0 api.mcr.skype.com/d' block
-sed -i '/0.0.0.0 api.skype.com/d' block
-sed -i '/0.0.0.0 avatar.skype.com/d' block
-sed -i '/0.0.0.0 b.config.skype.com/d' block
-sed -i '/0.0.0.0 client-s.gateway.messenger.live.com/d' block
-sed -i '/0.0.0.0 contacts.skype.com/d' block
-sed -i '/0.0.0.0 dev.microsofttranslator.com/d' block
-sed -i '/0.0.0.0 diagnostics.support.microsoft.akadns.net/d' block
-sed -i '/0.0.0.0 diagnostics.support.microsoft.com/d' block
-sed -i '/0.0.0.0 edge.skype.com/d' block
-sed -i '/0.0.0.0 m.hotmail.com/d' block
-sed -i '/0.0.0.0 mobile.pipe.aria.microsoft.com/d' block
-sed -i '/0.0.0.0 msftncsi.com/d' block
-sed -i '/0.0.0.0 msg.skype.com/d' block
-sed -i '/0.0.0.0 next-services.apps.microsoft.com/d' block
-sed -i '/0.0.0.0 nexus.officeapps.live.com/d' block
-sed -i '/0.0.0.0 profile.skype.com/d' block
-sed -i '/0.0.0.0 s.gateway.messenger.live.com/d' block
-sed -i '/0.0.0.0 skype.net/d' block
-sed -i '/0.0.0.0 ui.skype.com/d' block
-sed -i '/0.0.0.0 www.msftncsi.com/d' block
-sed -i '/0.0.0.0 stat.online.sberbank.ru/d' block
-sed -i '/0.0.0.0 s.click.aliexpress.com/d' block
-sed -i '/0.0.0.0 yandex.ru/d' block
-sed -i '/0.0.0.0 yastatic.net/d' block
-sed -i '/0.0.0.0 r.mail.ru/d' block
-sed -i '/0.0.0.0 c.fa.jd.com/d' block
-sed -i '/0.0.0.0 whale.jd.com/d' block
-sed -i '/0.0.0.0 saturn.jd.com/d' block
-sed -i '/0.0.0.0 t.paypal.com/d' block
-sed -i '/0.0.0.0 b.stats.paypal.com/d' block
-sed -i '/0.0.0.0 l.deals.ebay.com/d' block
-sed -i '/0.0.0.0 stats.ebay.com/d' block
-sed -i '/0.0.0.0 www.ojrq.net/d' block
-sed -i '/0.0.0.0 letyshops.com/d' block
-sed -i '/0.0.0.0 rutracker.org/d' block
-sed -i '/0.0.0.0 nnm-club.me/d' block
-sed -i '/0.0.0.0 nnm-club.ws/d' block
-sed -i '/0.0.0.0 nnmclub.to/d' block
-sed -i '/0.0.0.0 nnm-club.lib/d' block
-sed -i '/0.0.0.0 connectivitycheck.gstatic.com/d' block
-sed -i '/0.0.0.0 badges.instagram.com/d' block
-sed -i '/0.0.0.0 graph.instagram.com/d' block
-sed -i '/0.0.0.0 au.download.windowsupdate.com/d' block
-sed -i '/0.0.0.0 au.v4.download.windowsupdate.com/d' block
-sed -i '/0.0.0.0 bg.v4.a.dl.ws.microsoft.com/d' block
-sed -i '/0.0.0.0 bg.v4.emdl.ws.microsoft.com/d' block
-sed -i '/0.0.0.0 bg1.v4.a.dl.ws.microsoft.com/d' block
-sed -i '/0.0.0.0 bg1.v4.emdl.ws.microsoft.com/d' block
-sed -i '/0.0.0.0 bg2.v4.a.dl.ws.microsoft.com/d' block
-sed -i '/0.0.0.0 bg2.v4.emdl.ws.microsoft.com/d' block
-sed -i '/0.0.0.0 bg3.v4.a.dl.ws.microsoft.com/d' block
-sed -i '/0.0.0.0 bg3.v4.emdl.ws.microsoft.com/d' block
-sed -i '/0.0.0.0 bg4.v4.a.dl.ws.microsoft.com/d' block
-sed -i '/0.0.0.0 bg4.v4.emdl.ws.microsoft.com/d' block
-sed -i '/0.0.0.0 bg5.v4.a.dl.ws.microsoft.com/d' block
-sed -i '/0.0.0.0 bg5.v4.emdl.ws.microsoft.com/d' block
-sed -i '/0.0.0.0 ctldl.windowsupdate.com/d' block
-sed -i '/0.0.0.0 displaycatalog.mp.microsoft.com/d' block
-sed -i '/0.0.0.0 dl.delivery.mp.microsoft.com/d' block
-sed -i '/0.0.0.0 download.microsoft.com/d' block
-sed -i '/0.0.0.0 download.windowsupdate.com/d' block
-sed -i '/0.0.0.0 ds.download.windowsupdate.com/d' block
-sed -i '/0.0.0.0 emdl.ws.microsoft.com/d' block
-sed -i '/0.0.0.0 fe2.update.microsoft.com/d' block
-sed -i '/0.0.0.0 fe2.update.microsoft.com.akadns.net/d' block
-sed -i '/0.0.0.0 fe2.wq.microsoft.com/d' block
-sed -i '/0.0.0.0 fe2.ws.microsoft.com/d' block
-sed -i '/0.0.0.0 fe3.delivery.dsp.mp.microsoft.com.nsatc.net/d' block
-sed -i '/0.0.0.0 fe3.delivery.mp.microsoft.com/d' block
-sed -i '/0.0.0.0 fg.ds.b1.download.windowsupdate.com/d' block
-sed -i '/0.0.0.0 fg.v4.download.windowsupdate.com/d' block
-sed -i '/0.0.0.0 microsoftwindowsupdate.net/d' block
-sed -i '/0.0.0.0 sls.update.microsoft.com/d' block
-sed -i '/0.0.0.0 sls.update.microsoft.com.akadns.net/d' block
-sed -i '/0.0.0.0 statsfe1.ws.microsoft.com/d' block
-sed -i '/0.0.0.0 statsfe2.update.microsoft.com.akadns.net/d' block
-sed -i '/0.0.0.0 statsfe2.ws.microsoft.com/d' block
-sed -i '/0.0.0.0 tlu.dl.delivery.mp.microsoft.com/d' block
-sed -i '/0.0.0.0 v4.download.windowsupdate.com/d' block
-sed -i '/0.0.0.0 windowsupdate.com/d' block
-sed -i '/0.0.0.0 windowupdate.org/d' block
-sed -i '/0.0.0.0 www.download.windowsupdate.com/d' block
-sed -i '/0.0.0.0 alipromo.com/d' block
-sed -i '/0.0.0.0 rutrk.org/d' block
-sed -i '/0.0.0.0 adsrv.ea.com/d' block
+sed -i '/localhost/d' block
+sed -i '/localhost.localdomain/d' block
+sed -i '/ad.admitad.com/d' block
+sed -i '/api.cc.skype.com/d' block
+sed -i '/api.mcr.skype.com/d' block
+sed -i '/api.skype.com/d' block
+sed -i '/avatar.skype.com/d' block
+sed -i '/b.config.skype.com/d' block
+sed -i '/client-s.gateway.messenger.live.com/d' block
+sed -i '/contacts.skype.com/d' block
+sed -i '/dev.microsofttranslator.com/d' block
+sed -i '/diagnostics.support.microsoft.akadns.net/d' block
+sed -i '/diagnostics.support.microsoft.com/d' block
+sed -i '/edge.skype.com/d' block
+sed -i '/m.hotmail.com/d' block
+sed -i '/mobile.pipe.aria.microsoft.com/d' block
+sed -i '/msftncsi.com/d' block
+sed -i '/msg.skype.com/d' block
+sed -i '/next-services.apps.microsoft.com/d' block
+sed -i '/nexus.officeapps.live.com/d' block
+sed -i '/profile.skype.com/d' block
+sed -i '/s.gateway.messenger.live.com/d' block
+sed -i '/skype.net/d' block
+sed -i '/ui.skype.com/d' block
+sed -i '/www.msftncsi.com/d' block
+sed -i '/stat.online.sberbank.ru/d' block
+sed -i '/s.click.aliexpress.com/d' block
+sed -i '/yandex.ru/d' block
+sed -i '/yastatic.net/d' block
+sed -i '/r.mail.ru/d' block
+sed -i '/c.fa.jd.com/d' block
+sed -i '/whale.jd.com/d' block
+sed -i '/saturn.jd.com/d' block
+sed -i '/t.paypal.com/d' block
+sed -i '/b.stats.paypal.com/d' block
+sed -i '/l.deals.ebay.com/d' block
+sed -i '/stats.ebay.com/d' block
+sed -i '/www.ojrq.net/d' block
+sed -i '/letyshops.com/d' block
+sed -i '/rutracker.org/d' block
+sed -i '/nnm-club.me/d' block
+sed -i '/nnm-club.ws/d' block
+sed -i '/nnmclub.to/d' block
+sed -i '/nnm-club.lib/d' block
+sed -i '/connectivitycheck.gstatic.com/d' block
+sed -i '/badges.instagram.com/d' block
+sed -i '/graph.instagram.com/d' block
+sed -i '/au.download.windowsupdate.com/d' block
+sed -i '/au.v4.download.windowsupdate.com/d' block
+sed -i '/bg.v4.a.dl.ws.microsoft.com/d' block
+sed -i '/bg.v4.emdl.ws.microsoft.com/d' block
+sed -i '/bg1.v4.a.dl.ws.microsoft.com/d' block
+sed -i '/bg1.v4.emdl.ws.microsoft.com/d' block
+sed -i '/bg2.v4.a.dl.ws.microsoft.com/d' block
+sed -i '/bg2.v4.emdl.ws.microsoft.com/d' block
+sed -i '/bg3.v4.a.dl.ws.microsoft.com/d' block
+sed -i '/bg3.v4.emdl.ws.microsoft.com/d' block
+sed -i '/bg4.v4.a.dl.ws.microsoft.com/d' block
+sed -i '/bg4.v4.emdl.ws.microsoft.com/d' block
+sed -i '/bg5.v4.a.dl.ws.microsoft.com/d' block
+sed -i '/bg5.v4.emdl.ws.microsoft.com/d' block
+sed -i '/ctldl.windowsupdate.com/d' block
+sed -i '/displaycatalog.mp.microsoft.com/d' block
+sed -i '/dl.delivery.mp.microsoft.com/d' block
+sed -i '/download.microsoft.com/d' block
+sed -i '/download.windowsupdate.com/d' block
+sed -i '/ds.download.windowsupdate.com/d' block
+sed -i '/emdl.ws.microsoft.com/d' block
+sed -i '/fe2.update.microsoft.com/d' block
+sed -i '/fe2.update.microsoft.com.akadns.net/d' block
+sed -i '/fe2.wq.microsoft.com/d' block
+sed -i '/fe2.ws.microsoft.com/d' block
+sed -i '/fe3.delivery.dsp.mp.microsoft.com.nsatc.net/d' block
+sed -i '/fe3.delivery.mp.microsoft.com/d' block
+sed -i '/fg.ds.b1.download.windowsupdate.com/d' block
+sed -i '/fg.v4.download.windowsupdate.com/d' block
+sed -i '/microsoftwindowsupdate.net/d' block
+sed -i '/sls.update.microsoft.com/d' block
+sed -i '/sls.update.microsoft.com.akadns.net/d' block
+sed -i '/statsfe1.ws.microsoft.com/d' block
+sed -i '/statsfe2.update.microsoft.com.akadns.net/d' block
+sed -i '/statsfe2.ws.microsoft.com/d' block
+sed -i '/tlu.dl.delivery.mp.microsoft.com/d' block
+sed -i '/v4.download.windowsupdate.com/d' block
+sed -i '/windowsupdate.com/d' block
+sed -i '/windowupdate.org/d' block
+sed -i '/www.download.windowsupdate.com/d' block
+sed -i '/alipromo.com/d' block
+sed -i '/rutrk.org/d' block
+sed -i '/adsrv.ea.com/d' block
 
 # Clear Bad Domain
-sed -i '/0.0.0.0 www.turkishạirlines.com/d' block
-sed -i '/0.0.0.0 ɢoogle.com/d' block
-sed -i '/0.0.0.0 secret.ɢoogle.com/d' block
-sed -i '/0.0.0.0 myètherwället.com/d' block
-sed -i '/0.0.0.0 mÿethèrwallét.com/d' block
-
-echo Restart dnsmasq
-killall -SIGHUP dnsmasq
+sed -i '/www.turkishạirlines.com/d' block
+sed -i '/ɢoogle.com/d' block
+sed -i '/secret.ɢoogle.com/d' block
+sed -i '/myètherwället.com/d' block
+sed -i '/mÿethèrwallét.com/d' block
