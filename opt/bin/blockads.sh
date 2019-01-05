@@ -113,3 +113,7 @@ sed -i '/ɢoogle.com/d' block
 sed -i '/secret.ɢoogle.com/d' block
 sed -i '/myètherwället.com/d' block
 sed -i '/mÿethèrwallét.com/d' block
+
+echo Restart dnsmasq
+restart_dhcpd
+restart_firewall
