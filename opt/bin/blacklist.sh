@@ -14,5 +14,6 @@ sed -i 's/0.0.0.0 //g' blacklist.conf
 sed -i 's/.*/ipset=\/&\/blocked/' blacklist.conf
 
 echo Restart dnsmasq
+ipset flush blocked
 restart_dhcpd
 restart_firewall
