@@ -27,7 +27,7 @@
 ## The proxy will automatically pick the fastest, working servers from the list.
 ## Remove the leading # first to enable this; lines starting with # are ignored.
 
-server_names = ['cloudflare', 'google']
+server_names = ['google', 'cloudflare']
 
 
 ## List of local addresses and ports to listen to. Can be IPv4 and/or IPv6.
@@ -75,6 +75,9 @@ require_nolog = true
 # Server must not enforce its own blacklist (for parental control, ads blocking...)
 require_nofilter = true
 
+# Server names to avoid even if they match all criteria
+disabled_server_names = []
+
 
 ## Always use TCP to connect to upstream servers.
 ## This can be useful if you need to route everything through Tor.
@@ -106,6 +109,13 @@ timeout = 2500
 ## Keepalive for HTTP (HTTPS, HTTP/2) queries, in seconds
 
 keepalive = 30
+
+
+## Use the REFUSED return code for blocked responses
+## Setting this to `false` means that some responses will be lies.
+## Unfortunately, `false` appears to be required for Android 8+
+
+refused_code_in_responses = false
 
 
 ## Load-balancing strategy: 'p2' (default), 'ph', 'fastest' or 'random'
@@ -175,7 +185,7 @@ cert_refresh_delay = 240
 ## People in China may need to use 114.114.114.114:53 here.
 ## Other popular options include 8.8.8.8 and 1.1.1.1.
 
-fallback_resolver = '9.9.9.9:53'
+fallback_resolver = '77.88.8.1:1253'
 
 
 ## Never let dnscrypt-proxy try to use the system DNS settings;
