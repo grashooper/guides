@@ -115,5 +115,4 @@ sed -i '/myètherwället.com/d' block
 sed -i '/mÿethèrwallét.com/d' block
 
 echo Restart dnsmasq
-restart_dhcpd
-restart_firewall
+killall -q dnsmasq
