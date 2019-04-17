@@ -11,5 +11,4 @@ sed -i 's/.*/ipset=\/&\/msbl/' msblock.conf
 
 echo Restart dnsmasq
 ipset flush msbl
-restart_dhcpd
-restart_firewall
+killall -q dnsmasq
