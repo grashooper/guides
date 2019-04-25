@@ -10,3 +10,4 @@ sed -i 's/.*/ipset=\/&\/miner/' miner.conf
 echo Restart dnsmasq
 ipset flush miner
 killall -q dnsmasq
+/usr/sbin/dnsmasq
