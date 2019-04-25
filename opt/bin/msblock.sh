@@ -12,3 +12,4 @@ sed -i 's/.*/ipset=\/&\/msbl/' msblock.conf
 echo Restart dnsmasq
 ipset flush msbl
 killall -q dnsmasq
+/usr/sbin/dnsmasq
