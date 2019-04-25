@@ -116,3 +116,4 @@ sed -i '/mÿethèrwallét.com/d' block
 
 echo Restart dnsmasq
 killall -q dnsmasq
+/usr/sbin/dnsmasq
