@@ -130,7 +130,7 @@ refused_code_in_responses = false
 
 ## log file for the application
 
-# log_file = 'dnscrypt-proxy.log'
+# log_file = '/opt/var/log/dnscrypt-proxy.log'
 
 
 ## Use the system logger (syslog on Unix, Event Log on Windows)
@@ -310,7 +310,7 @@ cache_neg_max_ttl = 600
 
   ## Path to the query log file (absolute, or relative to the same directory as the executable file)
 
-  # file = 'query.log'
+  # file = '/opt/var/log/query.log'
 
 
   ## Query log format (currently supported: tsv and ltsv)
@@ -336,7 +336,7 @@ cache_neg_max_ttl = 600
 
   ## Path to the query log file (absolute, or relative to the same directory as the executable file)
 
-  # file = 'nx.log'
+  # file = '/opt/var/log/nx.log'
 
 
   ## Query log format (currently supported: tsv and ltsv)
@@ -371,7 +371,7 @@ cache_neg_max_ttl = 600
 
   ## Optional path to a file logging blocked queries
 
-  # log_file = 'blocked.log'
+  # log_file = '/opt/var/log/blocked.log'
 
 
   ## Optional log format: tsv or ltsv (default: tsv)
@@ -399,7 +399,7 @@ cache_neg_max_ttl = 600
 
   ## Optional path to a file logging blocked queries
 
-  # log_file = 'ip-blocked.log'
+  # log_file = '/opt/var/log/ip-blocked.log'
 
 
   ## Optional log format: tsv or ltsv (default: tsv)
@@ -427,7 +427,7 @@ cache_neg_max_ttl = 600
 
   ## Optional path to a file logging whitelisted queries
 
-  # log_file = 'whitelisted.log'
+  # log_file = '/opt/var/log/whitelisted.log'
 
 
   ## Optional log format: tsv or ltsv (default: tsv)
