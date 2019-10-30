@@ -138,7 +138,7 @@ keepalive = 30
 
 ## log file for the application
 
-# log_file = 'dnscrypt-proxy.log'
+# log_file = '/opt/var/log/dnscrypt-proxy.log'
 
 
 ## Use the system logger (syslog on Unix, Event Log on Windows)
