@@ -193,7 +193,7 @@ cert_refresh_delay = 240
 ## People in China may need to use 114.114.114.114:53 here.
 ## Other popular options include 8.8.8.8 and 1.1.1.1.
 
-fallback_resolver = '77.88.8.1:1253'
+fallback_resolver = '9.9.9.9:9953'
 
 
 ## Never let dnscrypt-proxy try to use the system DNS settings;
@@ -220,7 +220,7 @@ netprobe_timeout = 60
 ## On other operating systems, the connection will be initialized
 ## but nothing will be sent at all.
 
-netprobe_address = '77.88.8.1:1253'
+netprobe_address = '1.1.1.1:53'
 
 
 ## Offline mode - Do not use any remote encrypted servers.
