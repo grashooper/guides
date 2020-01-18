@@ -58,7 +58,7 @@ ipv4_servers = true
 ipv6_servers = false
 
 # Use servers implementing the DNSCrypt protocol
-dnscrypt_servers = true
+dnscrypt_servers = false
 
 # Use servers implementing the DNS-over-HTTPS protocol
 doh_servers = true
@@ -67,7 +67,7 @@ doh_servers = true
 ## Require servers defined by remote sources to satisfy specific properties
 
 # Server must support DNS security extensions (DNSSEC)
-require_dnssec = false
+require_dnssec = true
 
 # Server must not log user queries (declarative)
 require_nolog = true
@@ -199,7 +199,7 @@ fallback_resolver = '9.9.9.9:9953'
 ## Never let dnscrypt-proxy try to use the system DNS settings;
 ## unconditionally use the fallback resolver.
 
-ignore_system_dns = false
+ignore_system_dns = true
 
 
 ## Maximum time (in seconds) to wait for network connectivity before
