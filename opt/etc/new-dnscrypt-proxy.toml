@@ -59,7 +59,7 @@ ipv4_servers = true
 ipv6_servers = false
 
 # Use servers implementing the DNSCrypt protocol
-dnscrypt_servers = true
+dnscrypt_servers = false
 
 # Use servers implementing the DNS-over-HTTPS protocol
 doh_servers = true
@@ -68,7 +68,7 @@ doh_servers = true
 ## Require servers defined by remote sources to satisfy specific properties
 
 # Server must support DNS security extensions (DNSSEC)
-require_dnssec = false
+require_dnssec = true
 
 # Server must not log user queries (declarative)
 require_nolog = true
@@ -183,21 +183,23 @@ cert_refresh_delay = 240
 # tls_cipher_suite = [52392, 49199]
 
 
-## Fallback resolver
-## This is a normal, non-encrypted DNS resolver, that will be only used
+## Fallback resolvers
+## These are normal, non-encrypted DNS resolvers, that will be only used
 ## for one-shot queries when retrieving the initial resolvers list, and
 ## only if the system DNS configuration doesn't work.
-## No user application queries will ever be leaked through this resolver,
-## and it will not be used after IP addresses of resolvers URLs have been found.
-## It will never be used if lists have already been cached, and if stamps
+## No user application queries will ever be leaked through these resolvers,
+## and they will not be used after IP addresses of resolvers URLs have been found.
+## They will never be used if lists have already been cached, and if stamps
 ## don't include host names without IP addresses.
-## It will not be used if the configured system DNS works.
-## A resolver supporting DNSSEC is recommended.
+## They will not be used if the configured system DNS works.
+## Resolver supporting DNSSEC are recommended.
 ##
 ## People in China may need to use 114.114.114.114:53 here.
 ## Other popular options include 8.8.8.8 and 1.1.1.1.
+##
+## If more than one resolver are specified, they will be tried in sequence.
 
-fallback_resolver = '77.88.8.1:1253'
+fallback_resolvers = ['9.9.9.9:9953', '1.1.1.1:53']
 
 
 ## Always use the fallback resolver before the system DNS settings.
@@ -223,7 +225,7 @@ netprobe_timeout = 60
 ## On other operating systems, the connection will be initialized
 ## but nothing will be sent at all.
 
-netprobe_address = '77.88.8.1:1253'
+netprobe_address = '1.1.1.1:53'
 
 
 ## Offline mode - Do not use any remote encrypted servers.
@@ -395,7 +397,7 @@ cache_neg_max_ttl = 600
 [query_log]
 
   ## Path to the query log file (absolute, or relative to the same directory as the config file)
-  ## Can be /dev/stdout to log to the standard output (and set log_files_max_size to 0)
+  ## Non non-Windows systems, can be /dev/stdout to log to the standard output (and set log_files_max_size to 0)
 
   # file = '/opt/var/log/query.log'
 
@@ -591,7 +593,7 @@ cache_neg_max_ttl = 600
   ## Anonymized DNS relays
 
   [sources.'relays']
-  urls = ['https://github.com/DNSCrypt/dnscrypt-resolvers/raw/master/v2/relays.md', 'https://download.dnscrypt.info/resolvers-list/v2/relays.md']
+  urls = ['https://raw.githubusercontent.com/DNSCrypt/dnscrypt-resolvers/master/v2/relays.md', 'https://download.dnscrypt.info/resolvers-list/v2/relays.md']
   cache_file = 'relays.md'
   minisign_key = 'RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3'
   refresh_delay = 72
