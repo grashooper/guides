@@ -11,6 +11,7 @@ echo Generation BlackList
 cd /opt/etc/
 sed -i '/^#/d;/^$/d' blacklist.conf
 sed -i 's/0.0.0.0 //g' blacklist.conf
+sed -i '/vortex.data.microsoft.com/d; /vortex-win.data.microsoft.com/d' blacklist.conf
 sed -i 's/.*/ipset=\/&\/blocked/' blacklist.conf
 
 echo Restart dnsmasq
