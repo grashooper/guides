@@ -157,7 +157,7 @@ lb_estimator = true
 ## This file is different from other log files, and will not be
 ## automatically rotated by the application.
 
-log_file = '/opt/var/log/dnscrypt-proxy.log'
+# log_file = '/opt/var/log/dnscrypt-proxy.log'
 
 
 ## When using a log file, only keep logs from the most recent launch.
@@ -408,7 +408,7 @@ cache_neg_max_ttl = 600
 
 ## Addresses that the local DoH server should listen to
 
-# listen_addresses = ['127.0.0.1:3000']
+# listen_addresses = ['192.168.1.1:3000']
 
 
 ## Path of the DoH URL. This is not a file, but the part after the hostname
